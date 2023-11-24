@@ -38,60 +38,6 @@ eleventyNavigation:
 
 
 
-      
-
- 
-
-    <!-- ============================================ -->
-    <!--              Main Blog Content               -->
-    <!-- ============================================ -->
-
-    <div class="blog-container main-content-wrapper">
-        <!--Main content -->
-        <div class="main-content">
-            <!-- ============================================ -->
-            <!--                 Blog Articles                -->
-            <!-- ============================================ -->
-
-            {% if collections.post | length == 0 %}
-                <h1>No Recent Posts</h1>
-            {% else %}
-                {%- for post in collections.post -%}
-                    <article class="recent-articles">
-                        <!--Main Article Image-->
-                        <h2>{{ post.data.title }}</h2>
-                        <picture class="blog-mainImage">
-                            <img
-                            src="{{ post.data.image }}"
-                            alt="{{ post.data.imageAlt }}"
-                        
-                            decoding="async" />
-                        </picture>
-                        <!--Article Info-->
-                        <div class="article-group">
-                            <div class="blog-authorGroup">
-                                <!--Author Image
-                                <picture class="blog-author-img">
-                                    <img
-                                    src="/assets/svgs/profile.svg"
-                                    alt="house"
-                                    width="32"
-                                    height="32"
-                                    decoding="async" />
-                                </picture>
-                                <span class="blog-author">{{ post.data.author }}</span>
-                                <span aria-hidden="true" class="blog-dot"></span>-->
-                                <!--Blog Date
-                                <span class="blog-date">{{ post.date | postDate }}</span>-->
-                            </div>
-                            <!--<a href="{{ post.url }}" >{{ post.data.title }}</a>-->
-                        </div>
-                    </article>
-                {%- endfor -%}
-            {% endif %}
-        </div>
-
-       
-    </div>
+body
     
 {% endblock %}
